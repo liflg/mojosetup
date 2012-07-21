@@ -1,0 +1,52 @@
+
+                {GAME}: {Language} version {Version}
+                         (http://{url}/)
+
+========================================
+
+ABOUT
+=====
+
+    Short description.
+    You can find short descriptions at
+    linux-gamers.net
+    3dgamers.com
+    freshmeat.net
+
+SYSTEM REQUIREMENTS {only used if we ship binaries we compiled}
+===============
+
+    You need the following package versions to run
+    the games you install with a LIFLG installer:
+
+    glibc >= 2.3.5
+    SDL >= 1.2.7
+    SDL_image >= 1.2.4
+    SDL_mixer >= 1.2.6
+    SDL_net >= 1.2.5
+    SDL_ttf >= 2.0.6
+    ogg >= 1.1
+    vorbis >= 1.1
+    libjpeg >= 6.2
+    libpng >= 1.2
+    zlib >= 1.2
+    freetype2 >= 2.1
+
+RUNNING THE GAME
+=============
+
+    Run "{script}" to play.
+
+NOTES
+====
+
+    - {Notes}
+
+TECHNICAL SUPPORT
+=============
+
+    Website: http://liflg.org/
+    Forum:   http://liflg.org/forum/
+
+The Linux Installers for Linux Gamers Team
+
