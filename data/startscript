@@ -5,7 +5,7 @@
 #
 # Copyright (C) 2004-2011 Team LIFLG http://www.liflg.org/
 #
-# 2012-07-29
+# 2012-07-30
 #
 # This script is free software; you can redistribute it and/or
 # modify it under the terms of the GNU Lesser General Public
@@ -32,8 +32,8 @@ LOKICOMPATDIR="Loki_Compat"
 # Use padsp whenever it is available (even when OSS is available)
 USE_PADSP="false"
 
-# Try to use padsp in case OSS is not available.
-TRY_FALLBACK_TO_PADSP="true"
+# Try to use padsp in case OSS is not available. Enable this for OSS-only games.
+TRY_FALLBACK_TO_PADSP="false"
 
 # Prevent failures with hardware acceleration
 # only for use with Loki-Compat libs
