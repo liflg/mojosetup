@@ -5,7 +5,7 @@
 #
 # Copyright (C) 2004-2011 Team LIFLG http://www.liflg.org/
 #
-# 2011-06-09
+# 2012-07-29
 #
 # This script is free software; you can redistribute it and/or
 # modify it under the terms of the GNU Lesser General Public
@@ -38,6 +38,10 @@ TRY_FALLBACK_TO_PADSP="true"
 # Prevent failures with hardware acceleration
 # only for use with Loki-Compat libs
 #DISABLE_SDL_VIDEO_YUV_HWACCEL="true"
+
+# If set, display YUV overlay directly on the video surface if possible,
+# instead of on the surface passed to SDL_CreateYUVOverlay.
+#ENABLE_SDL_VIDEO_YUV_DIRECT="true"
 
 # Set if and how long the CPUs should be stressed. This helps to prevent games from running too fast on dynamic frequence scaling CPUs.
 #ENABLE_CPU_BURN="true"
@@ -168,6 +172,11 @@ fi
 if [ "${DISABLE_SDL_VIDEO_YUV_HWACCEL}" = "true" ]
 then
     export SDL_VIDEO_YUV_HWACCEL=0
+fi
+
+if [ "${ENABLE_SDL_VIDEO_YUV_DIRECT}" = "true" ]
+then
+    export SDL_VIDEO_YUV_DIRECT=0
 fi
 
 if [ "$TRY_FALLBACK_TO_PADSP" = "true" -o "$USE_PADSP" = "true" ]
