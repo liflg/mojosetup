@@ -588,7 +588,7 @@ local function install_archive_entry(archive, ent, file, option)
 
     if file.filter ~= nil then
         local filterperms
-        dest, filterperms = file.filter(dest)
+        dest, filterperms = file.filter(dest, ent)
         if filterperms ~= nil then
             perms = filterperms
         end
@@ -876,7 +876,7 @@ local function serialize(obj, prefix, postfix)
         elseif objtype == "string" then
             addstr(string.format("%q", obj))
         elseif objtype == "function" then
-            addstr("loadstring(")
+            addstr("load(")
             addstr(string.format("%q", string.dump(obj)))
             addstr(")")
         elseif objtype == "table" then
